@@ -1,3 +1,5 @@
+const { exit } = require('process');
+
 const readline = require('readline').createInterface({
     input: process.stdin,
     output: process.stdout
@@ -25,7 +27,7 @@ const ask = () => {
             case "/stop":
                 console.log("Closing the application.")
                 readline.close()
-                break;
+                exit()
             case "/add":
                 const createdContact = {...contact};
                 const newId = contacts && contacts.length > 0 ? contacts[contacts.length - 1].id + 1 : 1
