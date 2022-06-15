@@ -27,7 +27,7 @@ const ask = () => {
             case "/stop":
                 console.log("Closing the application.")
                 readline.close()
-                exit()
+                process.exit()
             case "/add":
                 const createdContact = {...contact};
                 const newId = contacts && contacts.length > 0 ? contacts[contacts.length - 1].id + 1 : 1
