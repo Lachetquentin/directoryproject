@@ -77,7 +77,6 @@ const askPhoneNumber = (createdContact) => {
             console.log("Invalid phone number !")
             askPhoneNumber(createdContact)
         }
-
     });
 }
 
@@ -111,6 +110,7 @@ const deleteContact = () => {
             return;
         }
         contacts.splice(index, 1)
+        console.log("Contact successfully deleted !")
         ask()
     })
 }
